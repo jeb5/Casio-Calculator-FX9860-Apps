@@ -1,0 +1,206 @@
+0→H
+3→Dim List 9
+1→List 9[1]
+0→G
+While 1
+ClrGraph
+ViewWindow 1,127,1,1,63,1
+AxesOff
+GridOff
+While Getkey:WhileEnd
+RclPict 7
+PxlOn 1,1
+45→B
+If List 9[1]>1
+Then Text 35,33,"--- ROUND   ---"
+Text 35,75,List 9[1]
+Text 43,33," X:__      O:__"
+Text 43,44,List 9[2]
+Text 43,83,List 9[3]
+53→B
+IfEnd
+1→C
+0→A
+While Not A
+C⇒Text B,46,"PRESS EXE"
+Not C⇒Text B,46,"         "
+For C×10+30→A To 0 Step -1:Getkey=31⇒Break:Next
+Not C→C
+WhileEnd
+'Start Game
+ClrGraph
+ViewWindow 1,127,1,1,63,1
+RclPict 8
+If G
+Then Text 54,27,"ON"
+Else Text 54,27,"OFF"
+IfEnd
+Text 54,94,List 9[2]
+Text 54,115,List 9[3]
+MOD(List 9[1]+1,2)→O
+If O
+Then F-Line 6,10,8,10
+F-Line 9,9,9,7
+F-Line 8,6,6,6
+F-Line 5,7,5,9
+Else 
+F-Line 5,10,9,6
+F-Line 5,6,9,10
+IfEnd
+F-Line 59,60,61,60
+G⇒PxlOn 45,60
+
+0→P
+10→Z
+20→Dim List 1
+{20,7}→Dim Mat A
+Fill(-1,Mat A)
+'Game Loop
+While 1
+Getkey→K
+If K
+Then If K=38 Or K=27
+Then 'MOVE
+If List 1[Z]=7
+Then PxlOff 4,Z×6-1
+PxlOff 4,Z×6
+PxlOff 4,Z×6+1
+Else Text 3,Z×6-1," "
+G⇒PxlOff -List 1[Z]×6+45,Z×6
+IfEnd
+If K=38
+Then Z-1→Z
+Z<1⇒20→Z
+Else Z+1→Z
+Z>20⇒1→Z
+IfEnd
+F-Line Z×6-1,60,Z×6+1,60
+List 1[Z]→A
+G And A≠7⇒PxlOn -A×6+45,Z×6
+Goto 3
+IfEnd
+If K=31
+Then 'DROP
+List 1[Z]→A
+If A≠7
+Then If A≠6 And H
+Then O⇒"#E6A5"→Str 1
+Not O⇒"×"→Str 1
+Z×6-1→C
+For 11→B To -A×6+42 Step 6
+Text B-6,C," "
+Text B,C,Str 1
+Next
+Text B,C," "
+IfEnd
+G⇒PxlOff -A×6+45,Z×6
+A×6+21→B
+Z×6-2→A
+If O
+Then F-Line A+1,B,A+3,B
+F-Line A+4,B-1,A+4,B-3
+F-Line A+3,B-4,A+1,B-4
+F-Line A,B-3,A,B-1
+Else F-Line A,B,A+4,B-4
+F-Line A,B-4,A+4,B
+IfEnd
+
+List 1[Z]+1→V
+O→Mat A[Z,V]
+'Begin win detection
+If V>3
+Then 1→A
+Do
+O≠Mat A[Z,V-A]⇒Break
+A+1→A
+LpWhile A≠4
+A=4⇒Goto 5
+IfEnd
+For -1→A To 1
+0→F
+For -1→C To 1 Step 2
+1→B
+Do
+A×B×C+V→D
+B×C+Z→E
+D>7 Or D<1 Or E>20 Or E<1⇒Break
+Mat A[E,D]≠O⇒Break
+B+1→B
+LpWhile B≠4
+F+B-1→F
+F≥3⇒Goto 5
+Next
+Next
+'End win detection
+V→List 1[Z]
+G And V≠7⇒PxlOn -V×6+45,Z×6
+Not O→O
+Text 54,4,"  "
+If O
+Then F-Line 6,10,8,10
+F-Line 9,9,9,7
+F-Line 8,6,6,6
+F-Line 5,7,5,9
+Else 
+F-Line 5,10,9,6
+F-Line 5,6,9,10
+IfEnd
+P+1→P
+Text 54,68,P
+If P=140
+Then Text 23,55,"WHAT"
+Goto 6
+IfEnd
+IfEnd
+Goto 3
+IfEnd
+If K=48
+Then 'TGL GHOST
+Not G→G
+Text 54,27,"   "
+List 1[Z]→A
+If G
+Then Text 54,27,"ON"
+A≠7⇒PxlOn -A×6+45,Z×6
+Else Text 54,27,"OFF"
+A≠7⇒PxlOff -A×6+45,Z×6
+IfEnd
+Goto 3
+IfEnd
+If K=47
+Then 'EXIT
+Menu "Quit Game?","Resume",2,"Quit",4
+Lbl 2
+PxlOn 2,2
+Goto 3
+IfEnd
+Lbl 3
+While Getkey:WhileEnd
+IfEnd
+WhileEnd
+Lbl 5
+PxlOff 4,Z×6-1
+PxlOff 4,Z×6
+PxlOff 4,Z×6+1
+Text 52,3,"                              "
+Text 55,3,"                              "
+47→A
+10→B
+If O
+Then F-Line A+1,B,A+3,B
+F-Line A+4,B-1,A+4,B-3
+F-Line A+3,B-4,A+1,B-4
+F-Line A,B-3,A,B-1
+Else F-Line A,B,A+4,B-4
+F-Line A,B-4,A+4,B
+IfEnd
+Text 54,57,"WINS·!·"
+List 9[2+O]+1→List 9[2+O]
+Lbl 6
+List 9[1]+1→List 9[1]
+While Getkey≠31:WhileEnd
+Lbl 4
+WhileEnd
+'
+'Jeb 2020
+'

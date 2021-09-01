@@ -1,0 +1,216 @@
+{8,2}→Dim Mat D
+-1→Mat D[1,2]
+1→Mat D[2,1]
+-1→Mat D[2,2]
+1→Mat D[3,1]
+1→Mat D[4,1]
+1→Mat D[4,2]
+1→Mat D[5,2]
+-1→Mat D[6,1]
+1→Mat D[6,2]
+-1→Mat D[7,1]
+-1→Mat D[8,1]
+-1→Mat D[8,2]
+{21,7}→Dim Mat M
+0→H
+0→I
+0→J
+'
+Lbl 3
+Locate 1,1," ####### ##### # ### "
+Locate 1,2," # # # # ##  # # # # "
+Locate 1,3," # # # ##### # # # # "
+Locate 1,4," # # # # ##  # # # # "
+Locate 1,5," ### # # ########### "
+H+1→H
+MOD(H,2)→U
+Fill(2,Mat M)
+0→Mat M[11,4]
+0→Mat M[12,5]
+1→Mat M[11,5]
+1→Mat M[12,4]
+10→X
+3→Y
+1→O
+0→F
+0→G
+0→A
+9999→B
+1→C
+0→P
+0→N
+While 1
+Getkey→K
+C⇒B+1→B
+If B>25
+Then 0→B
+Not A→A
+A=0⇒Locate 7,7,"         "
+A=1⇒Locate 7,7,"PRESS EXE"
+IfEnd
+K=31⇒1→N
+N⇒Not K⇒Break
+K=46⇒1→P
+If P>0
+Then K=36⇒2→P
+If K=26 And P=2
+Then Locate 3,7,"Programmed by Jeb"
+0→C
+IfEnd
+IfEnd
+WhileEnd
+ClrText
+Locate 11,4,"#E6A3#E6A4"
+Locate 11,5,"#E6A4#E6A3"
+'
+While 1
+Getkey→K
+If K
+Then If O
+Then 'START KEYTESTS
+If K=28 Or K=27 Or K=38 Or K=37
+Then 'MOVEKEY PRESSD
+Mat M[X,Y]→A
+A=0⇒Locate X,Y,"#E6A3"
+A=1⇒Locate X,Y,"#E6A4"
+A=2⇒Locate X,Y," "
+K=28⇒Y-1→Y
+K=27⇒X+1→X
+K=37⇒Y+1→Y
+K=38⇒X-1→X
+X=22⇒1→X
+X=0⇒21→X
+Y=8⇒1→Y
+Y=0⇒7→Y
+999→F
+0→G
+IfEnd
+'
+If K=78 Or K=77 Or K=31
+Then 'PLCEKEY PRESSD
+If Mat M[X,Y]=2
+Then 0→E
+For 1→A To 8
+Mat D[A,1]→Q
+Mat D[A,2]→R
+X→V
+Y→W
+'START TSTING IN DIR
+For 1→B To 69
+V+Q→V
+W+R→W
+0→C
+If V≥1 And V≤21 And W≥1 And W≤7
+Then If Mat M[V,W]=U
+Then If B>1
+Then 1→C
+IfEnd
+Break
+Else If Mat M[V,W]=2
+Then Break
+IfEnd
+IfEnd
+Else Break
+IfEnd
+Next
+'START PLCING IN DIR
+If C
+Then 1→E
+X→V
+Y→W
+For 1→C To B
+U→Mat M[V,W]
+U=0⇒Locate V,W,"#E6A3"
+U=1⇒Locate V,W,"#E6A4"
+V+Q→V
+W+R→W
+Next
+IfEnd
+Next
+If E
+Then Not U→U
+99→F
+1→G
+IfEnd
+IfEnd
+IfEnd
+If K=47
+Then 'EXITKEY PRESSD
+Menu "End Game?","No",2,"Yes",1
+IfEnd
+'
+If K=48
+Then 'SKIPKEY PRESSD
+Menu "Skip Turn?","No",2,"Yes",4
+Lbl 4
+Not U→U
+999→F
+0→G
+IfEnd
+'
+IfEnd
+'END KEYTESTS
+Lbl 2
+0→O
+Else 1→O
+IfEnd
+'START FLASHCODE
+F+1→F
+If F≥15
+Then 0→F
+Not G→G
+If G
+Then U=0⇒Locate X,Y,"#E6A7"
+U=1⇒Locate X,Y,"#E6A8"
+Else Mat M[X,Y]→A
+A=0⇒Locate X,Y,"#E6A3"
+A=1⇒Locate X,Y,"#E6A4"
+A=2⇒Locate X,Y," "
+IfEnd
+IfEnd
+'END FLASHCODE
+WhileEnd
+Lbl 1
+ClrText
+Locate 8,5,"Scoring"
+0→X
+0→O
+For 1→W To 7
+W=1⇒Locate 11,3,"\\"
+W=2⇒Locate 11,3,"@7C"
+W=3⇒Locate 11,3,"/"
+W=4⇒Locate 11,3,"Ö"
+W=5⇒Locate 11,3,"\\"
+W=6⇒Locate 11,3,"@7C"
+W=7⇒Locate 11,3,"/"
+For 1→V To 21
+Mat M[V,W]=0⇒O+1→O
+Mat M[V,W]=1⇒X+1→X
+Next
+Next
+ClrText
+Locate 8,2,"ROUND"
+Locate 14,2,H
+X>O⇒I+1→I
+X<O⇒J+1→J
+X>O⇒Locate 6,4,"BLACK WINS·!·"
+X<O⇒Locate 6,4,"WHITE WINS·!·"
+X=O⇒Locate 9,4,"TIE·!·?"
+Locate 1,6,"Score:"
+Locate 11,6,"#E6A6:___"
+Locate 17,6,"#E6A5:___"
+Locate 13,6,X
+Locate 19,6,O
+Locate 1,7,"Wins:"
+Locate 11,7,"#E6A6:___"
+Locate 17,7,"#E6A5:___"
+Locate 13,7,I
+Locate 19,7,J
+0→A
+While 1
+Getkey=31⇒1→A
+A⇒Not Getkey⇒Goto 3
+WhileEnd
+'
+'Jeb 2019
+'

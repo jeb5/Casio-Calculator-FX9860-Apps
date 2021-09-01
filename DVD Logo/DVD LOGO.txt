@@ -1,0 +1,31 @@
+2.5→C
+'SPEED
+11→Q
+'LOGO WIDTH
+5→R
+'LOGO HEIGHT
+0→O
+sin 360=0⇒1→O
+Rad
+ViewWindow 0,127,1,0,63,1
+AxesOff
+GridOff
+Int (127÷2)→V
+Int (63÷2)→W
+(1.75+(Ran#(0.2)-0.1)+(RanInt#(0,4)÷2))×π→A
+cos A×C→S
+sin A×C→T
+O⇒Deg
+V+S→V
+W+T→W
+While 1
+V+S+Q>127 Or V+S<0⇒-S→S
+W+T+R>63 Or W+T<0⇒-T→T
+V+S→V
+W+T→W
+Cls
+Text Int W+1,Int V+1,"DVD"
+WhileEnd
+'
+'Jeb 2019
+'

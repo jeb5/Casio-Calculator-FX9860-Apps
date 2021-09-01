@@ -1,0 +1,147 @@
+Lbl 1
+Locate 9,3,"Snek·!·"
+While 1
+Getkey=0⇒Break
+WhileEnd
+9999→A
+0→F
+1→X
+2→Y
+1→M
+6→N
+0→D
+0→J
+While 1
+A+1→A
+If A≥5
+Then 0→A
+If F
+Then Locate 7,5,"PRESS EXE"
+Else Locate 7,5,"         "
+IfEnd
+Not F→F
+IfEnd
+Locate X,Y,"#E5B5"
+X=1 And Y=1⇒1→D
+X=21 And Y=1⇒2→D
+X=21 And Y=7⇒3→D
+X=1 And Y=7⇒0→D
+D=0⇒Y-1→Y
+D=1⇒X+1→X
+D=2⇒Y+1→Y
+D=3⇒X-1→X
+D=0⇒Locate X,Y,"#E69C"
+D=1⇒Locate X,Y,"#E69B"
+D=2⇒Locate X,Y,"#E69D"
+D=3⇒Locate X,Y,"#E69A"
+M=1 And N=1⇒1→J
+M=21 And N=1⇒2→J
+M=21 And N=7⇒3→J
+M=1 And N=7⇒0→J
+J=0⇒N-1→N
+J=1⇒M+1→M
+J=2⇒N+1→N
+J=3⇒M-1→M
+Locate M,N," "
+Getkey=31⇒Break
+WhileEnd
+ClrText
+'
+7×21+1→G
+G→Dim List 1
+G→Dim List 2
+{21,7}→Dim Mat A
+2→E
+1→S
+For 1→I To E+1
+11→List 1[I]
+4→List 2[I]
+Next
+Do
+RanInt#(1,21)→M
+RanInt#(1,7)→N
+LpWhile N=4
+2→Mat A[M,N]
+Locate M,N,"#E6A9"
+1→D
+0→R
+12→U
+While 1
+0→K
+For 1→I To U
+Getkey→A
+A≠0⇒A→K
+A=78⇒Break
+Next
+If K≠0
+Then K=28 And D≠2⇒0→D
+K=27 And D≠3⇒1→D
+K=37 And D≠0⇒2→D
+K=38 And D≠1⇒3→D
+IfEnd
+List 1[E]→X
+List 2[E]→Y
+D=0⇒Y-1→Y
+D=1⇒X+1→X
+D=2⇒Y+1→Y
+D=3⇒X-1→X
+X>21 Or X<1 Or Y>7 Or Y<1⇒Goto 2
+Mat A[X,Y]=1⇒Goto 2
+D=0⇒Locate X,Y,"#E69C"
+D=1⇒Locate X,Y,"#E69B"
+D=2⇒Locate X,Y,"#E69D"
+D=3⇒Locate X,Y,"#E69A"
+Locate List 1[E],List 2[E],"#E5B5"
+Mat A[X,Y]→A
+1→Mat A[X,Y]
+If A≠2
+Then Locate List 1[S],List 2[S]," "
+0→Mat A[List 1[S],List 2[S]]
+S+1→S
+S>G⇒1→S
+Else R+1→R
+Do
+RanInt#(1,21)→M
+RanInt#(1,7)→N
+LpWhile Mat A[M,N]=1
+2→Mat A[M,N]
+Locate M,N,"#E6A9"
+IfEnd
+E+1→E
+E>G⇒1→E
+X→List 1[E]
+Y→List 2[E]
+WhileEnd
+Lbl 2
+ClrText
+Locate 7,2,"GAME OVER"
+Locate 7,3,"Score: "
+Locate 14,3,R
+If R<15
+Then RanInt#(0,4)→A
+A=0⇒Locate 3,6,"You are a FAILURE"
+A=1⇒Locate 2,6,"Participation award"
+A=2⇒Locate 7,6,"Trashhhhh"
+A=3⇒Locate 10,6,"Ehh"
+A=4⇒Locate 6,6,"You are bad"
+IfEnd
+If R≥15 And R<60
+Then RanInt#(0,5)→A
+A=0⇒Locate 3,6,"Ok, this is epic."
+A=1⇒Locate 4,6,"Good job, GAMER"
+A=2⇒Locate 7,6,"Snek 100·!·"
+A=3⇒Locate 7,6,"Very nice"
+A=4⇒Locate 10,6,"RIP"
+A=5⇒Locate 8,6,"Not bad"
+IfEnd
+If R≥60
+Then RanInt#(0,1)→A
+A=0⇒Locate 5,6,"You are a GOD"
+A=1⇒Locate 9,6,"DUDEE"
+IfEnd
+While 1
+Getkey=31⇒Goto 1
+WhileEnd
+'
+'Jeb 2019
+'

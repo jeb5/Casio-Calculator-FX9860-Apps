@@ -1,0 +1,27 @@
+ClrGraph
+AxesOff
+GridOff
+RclPict 17
+While Getkey≠39
+WhileEnd
+Lbl 1
+ClrGraph
+RclPict 18
+While Getkey≠69
+WhileEnd
+ClrGraph
+RclPict 19
+While 1
+Getkey=29⇒Goto 1
+Getkey=79⇒Break
+WhileEnd
+For 1→A To 1500
+Next
+ClrGraph
+RclPict 20
+While Getkey≠47
+WhileEnd
+Goto 1
+'
+'Jeb 2020
+'

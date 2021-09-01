@@ -1,0 +1,6 @@
+While Getkey
+WhileEnd
+While Getkey≠31
+WhileEnd
+While Getkey
+WhileEnd

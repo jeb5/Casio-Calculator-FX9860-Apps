@@ -1,0 +1,9 @@
+-1→T
+Lbl 1
+Getkey→K
+If K≠T
+Then ClrText
+Locate 1,1,K
+K→T
+IfEnd
+Goto 1

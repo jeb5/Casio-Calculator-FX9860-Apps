@@ -1,0 +1,43 @@
+{21,7}→Dim Mat M
+Fill(61,Mat M)
+11→X
+4→Y
+1→O
+0→F
+0→G
+While 1
+Getkey→K
+If K
+Then If O
+Then If K=28 Or K=27 Or K=38 Or K=37
+Then Prog "-CNVSDRW"
+K=28⇒Y-1→Y
+K=27⇒X+1→X
+K=37⇒Y+1→Y
+K=38⇒X-1→X
+X=22⇒1→X
+X=0⇒21→X
+Y=8⇒1→Y
+Y=0⇒7→Y
+9999999→F
+0→G
+Else K→Mat M[X,Y]
+Prog "-CNVSDRW"
+IfEnd
+IfEnd
+0→O
+Else 1→O
+IfEnd
+F+1→F
+If F≥15
+Then 0→F
+G=0→G
+If G
+Then Locate X,Y,"#"
+Else Prog "-CNVSDRW"
+IfEnd
+IfEnd
+WhileEnd
+'
+'Jeb 2019
+'

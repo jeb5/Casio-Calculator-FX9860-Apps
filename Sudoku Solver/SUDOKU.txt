@@ -1,0 +1,168 @@
+ViewWindow 1,127,1,1,63,1
+GridOff
+AxesOff
+LabelOff
+{9,18}→Dim Mat A
+For 0→B To 8
+For 0→A To 8
+37+A×6+2×Int (A÷3)→Mat A[1+A,1+B×2]
+4+B×6+2×Int (B÷3)→Mat A[1+A,2+B×2]
+'Text D,C,"-"
+Next
+Next
+F-Line 34,62,94,62
+F-Line 34,42,94,42
+F-Line 34,22,94,22
+F-Line 34,2,94,2
+
+F-Line 34,62,34,2
+F-Line 54,62,54,2
+F-Line 74,62,74,2
+F-Line 94,62,94,2
+
+'
+'O→R
+'Mat D→Mat B
+'For 0→A To 8
+'For 0→B To 8
+'Mat B[A+1,B+1]→C
+'C=0⇒Text Mat A[A+1,2×B+2],Mat A[A+1,2×B+1]," "
+'C≠0⇒Text Mat A[A+1,2×B+2],Mat A[A+1,2×B+1],C
+'Next
+'Next
+'Goto 2
+'
+
+{9,9}→Dim Mat B
+0→S
+0→T
+0→F
+9×9→R
+While 1
+Getkey→K
+If K
+Then 
+K=31⇒Break
+If K=27 Or K=28 Or K=37 Or K=38
+Then 
+S→V
+T→W
+K=27 And V≠8⇒V+1→V
+K=38 And V≠0⇒V-1→V
+K=28 And W≠0⇒W-1→W
+K=37 And W≠8⇒W+1→W
+If (S+T)≠(V+W)
+Then 
+Mat B[S+1,T+1]→A
+A=0⇒Text Mat A[S+1,2×T+2],Mat A[S+1,2×T+1]," "
+A≠0⇒Text Mat A[S+1,2×T+2],Mat A[S+1,2×T+1],A
+V→S
+W→T
+IfEnd
+Else 
+-1→A
+K=71⇒0→A
+K=72⇒1→A
+K=62⇒2→A
+K=52⇒3→A
+K=73⇒4→A
+K=63⇒5→A
+K=53⇒6→A
+K=74⇒7→A
+K=64⇒8→A
+K=54⇒9→A
+If A≠-1
+Then 2→F
+Mat B[S+1,T+1]→B
+A→Mat B[S+1,T+1]
+B=0 And A≠0⇒R-1→R
+B≠0 And A=0⇒R+1→R
+IfEnd
+IfEnd
+IfEnd
+Mat A[S+1,2×T+1]→V
+Mat A[S+1,2×T+2]→W
+If F≤2
+Then Text W,V,"_"
+Else 
+Mat B[S+1,T+1]→A
+A=0⇒Text W,V," "
+A≠0⇒Text W,V,A
+IfEnd
+MOD(F+1,5)→F
+WhileEnd
+
+Mat B[S+1,T+1]→A
+A=0⇒Text Mat A[S+1,2×T+2],Mat A[S+1,2×T+1]," "
+A≠0⇒Text Mat A[S+1,2×T+2],Mat A[S+1,2×T+1],A
+'
+'R→O
+'Mat B→Mat D
+'
+Lbl 2
+
+{R,11}→Dim Mat C
+1→A
+For 0→C To 8
+For 0→B To 8
+If Mat B[B+1,C+1]=0
+Then B→Mat C[A,1]
+C→Mat C[A,2]
+A+1→A
+IfEnd
+Next
+Next
+
+1→I
+1→B
+While 1
+While I≤R
+Mat C[I,1]→S
+Mat C[I,2]→T
+'
+If B
+Then For 1→A To 9
+1→Mat C[I,A+2]
+Next
+For 0→A To 8
+Mat B[S+1,A+1]→B
+B⇒0→Mat C[I,B+2]
+Mat B[A+1,T+1]→B
+B⇒0→Mat C[I,B+2]
+Mat B[3×Int (S÷3)+MOD(A,3)+1,3×Int (T÷3)+Int (A÷3)+1]→B
+B⇒0→Mat C[I,B+2]
+Next
+IfEnd
+'
+For Mat B[S+1,T+1]+1→A To 9
+Mat C[I,A+2]⇒Break
+Next
+0→B
+A≠10⇒Mat C[I,A+2]→B
+If B=1
+Then 
+A→Mat B[S+1,T+1]
+Text Mat A[S+1,2×T+2],Mat A[S+1,2×T+1],A
+I+1→I
+1→B
+Else 
+'NO OK A
+0→Mat B[S+1,T+1]
+Text Mat A[S+1,2×T+2],Mat A[S+1,2×T+1]," "
+0→B
+I-1→I
+If I=0
+Then Menu "No more solutions","OK",4,"OK",4
+Lbl 4
+PxlOff 1,1
+While 1:WhileEnd
+IfEnd
+IfEnd
+WhileEnd
+Menu "Solution Found","OK",3,"OK",3
+Lbl 3
+PxlOff 1,1
+While Getkey=31:WhileEnd
+While Getkey≠31:WhileEnd
+I-1→I
+WhileEnd

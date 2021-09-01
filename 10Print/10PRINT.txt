@@ -1,0 +1,14 @@
+4→N
+'CHARSIZE
+ViewWindow 0,126,1,0,62,1
+AxesOff
+GridOff
+For 0→W To 62-N Step N
+For 0→V To 126-N Step N
+RanInt#(0,1)→A
+F-Line V+A×N,62-W,V+(1-A)×N,62-W-N
+Next
+Next
+'
+'Jeb 2020
+'
