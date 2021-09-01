@@ -46,7 +46,3 @@ If you want to learn more about Casio BASIC development on the Fx9860, I've foun
 - [This](https://community.casiocalc.org/topic/2448-casio-basic-tutorial/) Casio BASIC tutorial forum thread
 - Casio's fx-9860G [user manual](https://support.casio.com/storage/en/manual/pdf/EN/004/fx9860GSD_9860G_EN.pdf) (contains a chapter on Casio BASIC programming)
 - Tom Lynn's excellent [Casio Graphical Calculator Encyclopedia](http://www.ex-parrot.com/~tom/calcs/calcs/encyc/)
-
-This keycode reference image might come in handy as well: _(From the Fx9860G's user manual)_
-
-<img src="https://i.imgur.com/spxL2by.png" alt="drawing" width="300"/>
