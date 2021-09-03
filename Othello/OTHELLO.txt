@@ -54,7 +54,7 @@ K=46⇒1→P
 If P>0
 Then K=36⇒2→P
 If K=26 And P=2
-Then Locate 3,7,"Programmed by Jeb"
+Then Locate 3,7,"-----------------"
 0→C
 IfEnd
 IfEnd

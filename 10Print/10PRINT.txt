@@ -9,6 +9,3 @@ RanInt#(0,1)→A
 F-Line V+A×N,62-W,V+(1-A)×N,62-W-N
 Next
 Next
-'
-'Jeb 2020
-'
