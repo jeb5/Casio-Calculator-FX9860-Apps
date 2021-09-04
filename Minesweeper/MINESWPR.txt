@@ -12,7 +12,8 @@
 -1→Mat D[7,1]
 -1→Mat D[8,1]
 -1→Mat D[8,2]
-'Lbl J
+Lbl J
+ClrText
 {21,7}→Dim Mat M
 {21,7}→Dim Mat U
 Fill(9,Mat U)
@@ -39,9 +40,6 @@ Locate 1,6,"    S W E E P E R    "
 0→A
 While 1
 Getkey=31⇒Break
-Getkey=46⇒1→A
-Getkey=36 And A=1⇒2→A
-Getkey=26 And A=2⇒Locate 1,7,"  Programmed by Jeb  "
 WhileEnd
 Locate 1,1,"#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA"
 Locate 1,2,"#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA#E6AA"
@@ -181,8 +179,4 @@ Mat U[S,T]=10⇒Locate S,T,"F"
 R=2⇒Goto 2
 R=3⇒Goto 3
 R=4⇒Goto 4
-Lbl J
 ClrText
-'
-'Jeb 2019
-'

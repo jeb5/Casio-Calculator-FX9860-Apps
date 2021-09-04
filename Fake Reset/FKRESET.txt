@@ -4,7 +4,7 @@ GridOff
 RclPict 17
 While Getkey≠39
 WhileEnd
-Lbl 1
+While 1
 ClrGraph
 RclPict 18
 While Getkey≠69
@@ -21,7 +21,4 @@ ClrGraph
 RclPict 20
 While Getkey≠47
 WhileEnd
-Goto 1
-'
-'Jeb 2020
-'
+WhileEnd

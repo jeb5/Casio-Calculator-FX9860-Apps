@@ -38,6 +38,3 @@ Else Prog "-CNVSDRW"
 IfEnd
 IfEnd
 WhileEnd
-'
-'Jeb 2019
-'

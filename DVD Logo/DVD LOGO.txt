@@ -26,6 +26,3 @@ W+T→W
 Cls
 Text Int W+1,Int V+1,"DVD"
 WhileEnd
-'
-'Jeb 2019
-'

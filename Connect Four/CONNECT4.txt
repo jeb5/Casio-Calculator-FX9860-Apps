@@ -201,6 +201,3 @@ List 9[1]+1→List 9[1]
 While Getkey≠31:WhileEnd
 Lbl 4
 WhileEnd
-'
-'Jeb 2020
-'

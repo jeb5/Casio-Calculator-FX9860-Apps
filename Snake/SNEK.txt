@@ -1,4 +1,5 @@
 Lbl 1
+ClrText
 Locate 9,3,"Snek·!·"
 While 1
 Getkey=0⇒Break
@@ -128,8 +129,8 @@ IfEnd
 If R≥15 And R<60
 Then RanInt#(0,5)→A
 A=0⇒Locate 3,6,"Ok, this is epic."
-A=1⇒Locate 4,6,"Good job, GAMER"
-A=2⇒Locate 7,6,"Snek 100·!·"
+A=1⇒Locate 4,6,"Good job, gamer"
+A=2⇒Locate 7,6,"Snek 100"
 A=3⇒Locate 7,6,"Very nice"
 A=4⇒Locate 10,6,"RIP"
 A=5⇒Locate 8,6,"Not bad"
@@ -137,11 +138,8 @@ IfEnd
 If R≥60
 Then RanInt#(0,1)→A
 A=0⇒Locate 5,6,"You are a GOD"
-A=1⇒Locate 9,6,"DUDEE"
+A=1⇒Locate 9,6,"Dude·!·"
 IfEnd
 While 1
 Getkey=31⇒Goto 1
 WhileEnd
-'
-'Jeb 2019
-'

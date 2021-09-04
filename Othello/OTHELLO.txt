@@ -17,6 +17,7 @@
 0→J
 '
 Lbl 3
+ClrText
 Locate 1,1," ####### ##### # ### "
 Locate 1,2," # # # # ##  # # # # "
 Locate 1,3," # # # ##### # # # # "
@@ -50,14 +51,6 @@ A=1⇒Locate 7,7,"PRESS EXE"
 IfEnd
 K=31⇒1→N
 N⇒Not K⇒Break
-K=46⇒1→P
-If P>0
-Then K=36⇒2→P
-If K=26 And P=2
-Then Locate 3,7,"-----------------"
-0→C
-IfEnd
-IfEnd
 WhileEnd
 ClrText
 Locate 11,4,"#E6A3#E6A4"
@@ -211,6 +204,3 @@ While 1
 Getkey=31⇒1→A
 A⇒Not Getkey⇒Goto 3
 WhileEnd
-'
-'Jeb 2019
-'

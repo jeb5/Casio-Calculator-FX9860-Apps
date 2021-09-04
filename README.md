@@ -10,6 +10,9 @@ For each program, I have provided the G1M file and the source code.
 
 To install a program, you will need to import the G1M file into the [FA-124](https://edu.casio.com/forteachers/er/software/) program for windows. You will need a USB link cable to connect to your calculator. _Some programs require additional picture files, or rely upon other programs to run._
 
+All programs will appear locked on the calculator. This is to prevent accidental code changes when you exit a program.
+The passwords are all "`LOCK`".
+
 ### About Program Source Code
 
 When a Casio BASIC program is opened in FA-124 for editing, the editor correctly displays unusual characters like `⇒` and `÷` correctly. However, when text is copied out of the editor, it becomes a different unicode character. (`⇒` and `÷` become `×` and `Á`, for example)
