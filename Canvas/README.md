@@ -14,3 +14,7 @@ All letter keys will place a letter under the cursor.
 The cursor can be moved with the arrow keys.
 Use `DEL` to erase.
 All other keys apart from `SHIFT` and `ALPHA` place misc symbols.
+
+### Image
+
+<img style="width: 256px; image-rendering: pixelated;" src="../_images/img4.bmp">
