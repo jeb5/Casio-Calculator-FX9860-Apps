@@ -12,3 +12,9 @@ Use `ALPHA` to dig, and `SHIFT` to flag/unflag.
 
 Pressing `ALPHA` on a blank/number tile will uncover the unflagged tiles directly around it, if the number on the tile matches the number of flags around it.
 Use this feature to speed up the process of digging known safe tiles.
+
+## Images
+
+<img style="width: 256px; image-rendering: pixelated;" src="../_images/img14.png">
+<img style="width: 256px; image-rendering: pixelated;" src="../_images/img15.png">
+<img style="width: 256px; image-rendering: pixelated;" src="../_images/img16.png">

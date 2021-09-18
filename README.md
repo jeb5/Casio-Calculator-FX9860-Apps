@@ -42,9 +42,23 @@ Substitutions:
 
 _Note: These aren't all of the characters, only the most common ones._
 
+## Gallery
+
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img6.bmp">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img8.bmp">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img1.bmp">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img4.bmp">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img16.png">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img19.png">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img20.png">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img22.png">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img26.png">
+<br/>
+<br/>
+
 # More resources
 
-If you want to learn more about Casio BASIC development on the Fx9860, I've found the following resources to be quite helpful:
+If you want to learn more about Casio BASIC development on the Fx9860, I've found the following resources to be helpful:
 
 - [This](https://community.casiocalc.org/topic/2448-casio-basic-tutorial/) Casio BASIC tutorial forum thread
 - Casio's fx-9860G [user manual](https://support.casio.com/storage/en/manual/pdf/EN/004/fx9860GSD_9860G_EN.pdf) (contains a chapter on Casio BASIC programming)
