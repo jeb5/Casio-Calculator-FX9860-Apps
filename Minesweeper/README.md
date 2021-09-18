@@ -15,6 +15,8 @@ Use this feature to speed up the process of digging known safe tiles.
 
 ## Images
 
+<p float="left">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img14.png">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img15.png">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img16.png">
+</p>

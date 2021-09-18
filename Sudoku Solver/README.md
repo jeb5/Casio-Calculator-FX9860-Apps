@@ -10,6 +10,8 @@ When all the starter cells have been filled in, use `EXE` to begin searching for
 
 ## Images
 
+<p float="left">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img25.png">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img26.png">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img27.png">
+</p>

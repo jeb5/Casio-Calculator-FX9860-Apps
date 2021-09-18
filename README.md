@@ -44,6 +44,7 @@ _Note: These aren't all of the characters, only the most common ones._
 
 ## Gallery
 
+<p float="left">
 <img style="width: 256px; image-rendering: pixelated;" src="_images/img6.bmp">
 <img style="width: 256px; image-rendering: pixelated;" src="_images/img8.bmp">
 <img style="width: 256px; image-rendering: pixelated;" src="_images/img1.bmp">
@@ -53,8 +54,7 @@ _Note: These aren't all of the characters, only the most common ones._
 <img style="width: 256px; image-rendering: pixelated;" src="_images/img20.png">
 <img style="width: 256px; image-rendering: pixelated;" src="_images/img22.png">
 <img style="width: 256px; image-rendering: pixelated;" src="_images/img26.png">
-<br/>
-<br/>
+</p>
 
 # More resources
 

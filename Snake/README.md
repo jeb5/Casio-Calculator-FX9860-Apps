@@ -10,7 +10,9 @@ Use the arrow keys to move, and `SHIFT` to boost.
 
 ## Images
 
+<p float="left">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img21.png">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img22.png">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img23.png">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img24.png">
+</p>

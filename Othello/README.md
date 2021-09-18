@@ -12,7 +12,9 @@ Situations where a move is impossible will not be automatically detected. Use `M
 
 ## Images
 
+<p float="left">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img17.png">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img18.png">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img19.png">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img20.png">
+</p>

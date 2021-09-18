@@ -17,4 +17,6 @@ All other keys apart from `SHIFT` and `ALPHA` place misc symbols.
 
 ### Image
 
+<p float="left">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img4.bmp">
+</p>

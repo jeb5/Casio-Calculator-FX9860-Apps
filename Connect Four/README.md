@@ -17,7 +17,9 @@ Use `MENU` to toggle guide mode. (Drop position will be visualized) `EXIT` allow
 
 ### Images
 
+<p float="left">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img6.bmp">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img8.bmp">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img7.bmp">
 <img style="width: 256px; image-rendering: pixelated;" src="../_images/img5.bmp">
+</p>
