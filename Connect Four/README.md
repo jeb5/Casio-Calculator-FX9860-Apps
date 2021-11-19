@@ -12,7 +12,7 @@ _Requires `PICT7` and `PICT8`_
 
 ## Controls
 
-Use arrow keys to move lift and right. `EXE` will drop your piece.
+Use arrow keys to move left and right. `EXE` will drop your piece.
 Use `MENU` to toggle guide mode. (Drop position will be visualized) `EXIT` allows you to abandon a game.
 
 ### Images
