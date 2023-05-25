@@ -4,6 +4,20 @@ _A collection of apps and games made for the Casio Fx9860 series of calculators_
 
 These are some of the programs I made in highschool for the Casio Fx9750GII, though they should work for any calculator in the Fx9860 series.
 
+## Gallery
+
+<p float="left">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img6.bmp">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img8.bmp">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img1.bmp">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img4.bmp">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img16.png">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img19.png">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img20.png">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img22.png">
+<img style="width: 256px; image-rendering: pixelated;" src="_images/img26.png">
+</p>
+
 ## Installation
 
 For each program, I have provided the G1M file and the source code.
@@ -41,20 +55,6 @@ Substitutions:
     «	x̄
 
 _Note: These aren't all of the characters, only the most common ones._
-
-## Gallery
-
-<p float="left">
-<img style="width: 256px; image-rendering: pixelated;" src="_images/img6.bmp">
-<img style="width: 256px; image-rendering: pixelated;" src="_images/img8.bmp">
-<img style="width: 256px; image-rendering: pixelated;" src="_images/img1.bmp">
-<img style="width: 256px; image-rendering: pixelated;" src="_images/img4.bmp">
-<img style="width: 256px; image-rendering: pixelated;" src="_images/img16.png">
-<img style="width: 256px; image-rendering: pixelated;" src="_images/img19.png">
-<img style="width: 256px; image-rendering: pixelated;" src="_images/img20.png">
-<img style="width: 256px; image-rendering: pixelated;" src="_images/img22.png">
-<img style="width: 256px; image-rendering: pixelated;" src="_images/img26.png">
-</p>
 
 # More resources
 
