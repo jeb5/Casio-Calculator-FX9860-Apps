@@ -29,7 +29,7 @@ The passwords are all "`LOCK`".
 
 ### About Program Source Code
 
-When a Casio BASIC program is opened in FA-124 for editing, the editor correctly displays unusual characters like `⇒` and `÷` correctly. However, when text is copied out of the editor, it becomes a different unicode character. (`⇒` and `÷` become `×` and `Á`, for example)
+When a Casio BASIC program is opened in FA-124 for editing, the editor displays unusual characters like `⇒` and `÷` correctly. However, when text is copied out of the editor, it becomes a different unicode character. (`⇒` and `÷` become `×` and `Á`, for example)
 To make my source code readable, I've put the text through a substitution cipher to transform _the most common_ of these symbols to unicode equivalents.
 
 If you wanted to transform the source code back into text for the FA-124 editor, you could apply this substitution in reverse, although I would recommend sticking to the G1M file, and making any changes in the FA-124 editor.
